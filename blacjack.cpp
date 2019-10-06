@@ -31,15 +31,6 @@ int main() {
     srand (time(NULL)); //random seed initialization
     dealcard();
     dealcard();
-    if(totaldealercard == 21){
-        cout << "Dealer has 21, dealer wins" << endl;
-        return 0;
-    }
-    
-    else if(card1 == 21){
-        cout << "You have 21, you win!" << endl;
-        return 0;
-    }
 
     cout << "Your fist two cards total out to be ";
     totalcardfunc();
@@ -69,6 +60,9 @@ int main() {
     else if(totaldealercard > card1){
         cout << "dealer has a higher hand, dealer wins" << endl;
         
+    }
+    else if(totaldealercard == card1){
+        cout <<"same hand, tie game" << endl;
     }
     
     else{
